@@ -30,7 +30,7 @@ A modern, responsive React application for matching job seekers with perfect job
 
 ### Notifications & Alerts
 
-- **SweetAlert2 11.26.4** - Elegant popup alerts and notifications
+- **SweetAlert2** - Elegant popup alerts and notifications
 
 ## 📦 Installation
 
