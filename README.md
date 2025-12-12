@@ -101,7 +101,7 @@ src/
 
 ### 2. Find Job Matches
 
-- Click **"Find My Perfect Matches"** button
+- Click **"Find My Job Matches"** button
 - The app will match your skills with available jobs
 - You'll automatically be taken to the **Matches** tab to see results
 
