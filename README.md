@@ -23,9 +23,6 @@ A modern, responsive React application for matching job seekers with perfect job
 
 - **Tailwind** - Utility-first CSS framework for rapid UI development
 - **Radix UI Components** - Accessible, unstyled component primitives
-  - React Label
-  - React Slot
-- **Class Variance Authority** - Type-safe component styling
 
 ### Animations & Interactions
 
