@@ -67,27 +67,27 @@ npm run dev
 ```
 src/
 ├── components/
-│   ├── ApplicationTracker.jsx      # Track job applications with status
-│   ├── JobList.jsx                 # Display all available jobs
-│   ├── Matches.jsx                 # Show matched job opportunities
-│   ├── ProfileForm.jsx             # User profile management
-│   ├── TabNavigation.jsx           # Tab-based navigation system
-│   └── ui/                         # Radix UI components
+│   ├── ApplicationTracker.jsx      
+│   ├── JobList.jsx                
+│   ├── Matches.jsx                
+│   ├── ProfileForm.jsx            
+│   ├── TabNavigation.jsx          
+│   └── ui/                         
 │       ├── badge.jsx
 │       ├── button.jsx
 │       ├── card.jsx
 │       ├── input.jsx
 │       └── label.jsx
 ├── pages/
-│   └── Dashboard.jsx               # Main application container
+│   └── Dashboard.jsx             
 ├── data/
-│   └── jobsData.js                 # Job listings data
+│   └── jobsData.js               
 ├── utils/
-│   └── alert.js                    # Reusable alert utility functions
-├── App.jsx                         # Root application component
-├── App.css                         # Global styles
-├── index.css                       # Base styles
-└── main.jsx                        # Application entry point
+│   └── alert.js                   
+├── App.jsx                        
+├── App.css                       
+├── index.css                    
+└── main.jsx                      
 ```
 
 ## 🎯 How to Use
