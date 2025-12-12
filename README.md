@@ -35,11 +35,6 @@ A modern, responsive React application for matching job seekers with perfect job
 
 ## 📦 Installation
 
-### Prerequisites
-
-- Node.js
-- npm
-
 ### Setup Steps
 
 1. **Clone the repository**
