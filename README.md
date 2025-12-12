@@ -114,7 +114,7 @@ src/
 ### 4. Track Applications
 
 - View the **Applications** tab to see all your submissions
-- Check the status of each application (Under Review, etc.)
+- Check the status of each application
 - See application dates and job details at a glance
 
 ## 🚀 Key Features Explained
@@ -142,7 +142,6 @@ src/
 - Profile validation alerts
 - Application success notifications
 - Match found confirmations
-- Helpful error messages
 
 ## 🎨 Color Theme
 
@@ -191,7 +190,7 @@ The application uses a modern **Emerald Green**
 **Alert Utility Separation**
 
 - **Design**: Extracted all SweetAlert2 calls into reusable utility functions
-- **Benefit**: Easy to maintain, modify alerts globally, and test
+- **Benefit**: Easy to maintain, modify alerts globally
 
 ## 🚀 Next Steps & Future Enhancements
 
