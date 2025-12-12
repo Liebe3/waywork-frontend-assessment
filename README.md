@@ -39,7 +39,7 @@ A modern, responsive React application for matching job seekers with perfect job
 1. **Clone the repository**
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/Liebe3/waywork-frontend-assessment.git
 cd waywork-frontend-assessment
 ```
 
