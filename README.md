@@ -5,7 +5,6 @@ A modern, responsive React application for matching job seekers with perfect job
 ## 🌟 Features
 
 - **Profile Management** - Create and manage your professional profile with skills and experience
-- **Smart Job Matching** - AI-powered skill matching algorithm to find your perfect job
 - **Browse All Jobs** - Explore all available job opportunities in one place
 - **Application Tracking** - Track the status of your job applications
 - **Responsive Design** - Perfect experience on desktop, tablet, and mobile devices
