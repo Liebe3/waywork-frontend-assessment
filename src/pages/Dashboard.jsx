@@ -73,6 +73,7 @@ const Dashboard = () => {
       return;
     }
 
+    //Converts comma-separated skills into an array
     const userSkills = userProfile.skills
       .toLowerCase()
       .split(",")
@@ -114,15 +115,15 @@ const Dashboard = () => {
       return;
     }
 
-    if (!/^\d{11}$/.test(mobileNumber)) {
-      setError("Please enter a valid 11-digit mobile number!");
+    if (!/^09\d{9}$/.test(mobileNumber)) {
+      setError("Please enter valid number only!");
       return;
     }
 
     const application = {
       ...job,
       appliedDate: new Date().toLocaleDateString(),
-      status: "Under Review",
+      status: "Accepted",
     };
 
     setAppliedJobs([...appliedJobs, application]);

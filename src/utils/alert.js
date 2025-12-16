@@ -8,7 +8,7 @@ export const alertIncompleteProfile = (message) => {
     icon: "warning",
     title: "Incomplete Profile",
     text:
-      message || "Please fill in your skills and experience to find matches!",
+      message || "Please fill in all required profile fields to proceed.",
     confirmButtonColor: "#10b981",
   });
 };
