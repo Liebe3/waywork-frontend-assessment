@@ -10,7 +10,13 @@ import { Label } from "@/components/ui/label";
 import { motion } from "framer-motion";
 import { Award, Briefcase, Mail, User } from "lucide-react";
 
-const ProfileForm = ({ userProfile, setUserProfile, handleMatch }) => {
+const ProfileForm = ({
+  userProfile,
+  setUserProfile,
+  handleMatch,
+  handleNumber,
+  error,
+}) => {
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -59,6 +65,7 @@ const ProfileForm = ({ userProfile, setUserProfile, handleMatch }) => {
                   id="firstName"
                   placeholder="John"
                   value={userProfile.firstName}
+                  required
                   onChange={(event) =>
                     setUserProfile({
                       ...userProfile,
@@ -79,6 +86,7 @@ const ProfileForm = ({ userProfile, setUserProfile, handleMatch }) => {
                   id="lastName"
                   placeholder="Doe"
                   value={userProfile.lastName}
+                  required
                   onChange={(event) =>
                     setUserProfile({
                       ...userProfile,
@@ -111,6 +119,7 @@ const ProfileForm = ({ userProfile, setUserProfile, handleMatch }) => {
                   id="email"
                   type="email"
                   placeholder="john@example.com"
+                  required
                   value={userProfile.email}
                   onChange={(event) =>
                     setUserProfile({
@@ -131,16 +140,16 @@ const ProfileForm = ({ userProfile, setUserProfile, handleMatch }) => {
                 </Label>
                 <Input
                   id="mobileNumber"
-                  placeholder="+1 (555) 123-4567"
+                  type="tel"
+                  inputMode="numeric"
+                  placeholder="09XX XXX XXXX"
+                  maxLength={11}
                   value={userProfile.mobileNumber}
-                  onChange={(event) =>
-                    setUserProfile({
-                      ...userProfile,
-                      mobileNumber: event.target.value,
-                    })
-                  }
+                  onChange={handleNumber}
+                  required
                   className="h-12 text-base border-2 border-gray-200 focus:border-emerald-500 focus:ring-2 focus:ring-emerald-100 transition-all duration-200 rounded-lg"
                 />
+                {error && <p className="text-sm text-red-500">{error}</p>}
               </div>
 
               <div className="space-y-2">
@@ -154,6 +163,7 @@ const ProfileForm = ({ userProfile, setUserProfile, handleMatch }) => {
                   id="address"
                   placeholder="123 Main Street, City, State 12345"
                   value={userProfile.address}
+                  required
                   onChange={(event) =>
                     setUserProfile({
                       ...userProfile,
@@ -189,6 +199,7 @@ const ProfileForm = ({ userProfile, setUserProfile, handleMatch }) => {
                   id="skills"
                   placeholder="React, JavaScript, Node.js, TypeScript"
                   value={userProfile.skills}
+                  required
                   onChange={(event) =>
                     setUserProfile({
                       ...userProfile,
