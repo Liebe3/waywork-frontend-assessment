@@ -32,9 +32,44 @@ const Dashboard = () => {
   const [matchedJobs, setMatchedJobs] = useState([]);
   const [appliedJobs, setAppliedJobs] = useState([]);
 
+  const [error, setError] = useState("");
+
+  const handleNumber = (event) => {
+    const input = event.target.value;
+    const numericInput = input.replace(/\D/g, "");
+    setUserProfile({
+      ...userProfile,
+      mobileNumber: numericInput,
+    });
+  };
+
   const handleMatch = () => {
-    if (!userProfile.skills || !userProfile.experience) {
+    const {
+      firstName,
+      lastName,
+      email,
+      address,
+      mobileNumber,
+      skills,
+      experience,
+    } = userProfile;
+
+    if (
+      !firstName ||
+      !lastName ||
+      !email ||
+      !address ||
+      !skills ||
+      !mobileNumber ||
+      !experience
+    ) {
       alertIncompleteProfile();
+      return;
+    }
+
+    //validate the number input to be 11 digits only
+    if (!/^09\d{9}$/.test(mobileNumber)) {
+      setError("Please enter valid number only!");
       return;
     }
 
@@ -55,6 +90,7 @@ const Dashboard = () => {
 
     setMatchedJobs(matches);
     setActiveTab("matches");
+    setError("");
 
     if (matches.length === 0) {
       alertNoMatchesFound();
@@ -64,8 +100,22 @@ const Dashboard = () => {
   };
 
   const handleApply = (job) => {
-    if (!userProfile.firstName || !userProfile.lastName) {
+    const { firstName, lastName, email, address, mobileNumber, skills } =
+      userProfile;
+    if (
+      !firstName ||
+      !lastName ||
+      !email ||
+      !address ||
+      !mobileNumber ||
+      !skills
+    ) {
       alertProfileIncompleteForApply();
+      return;
+    }
+
+    if (!/^\d{11}$/.test(mobileNumber)) {
+      setError("Please enter a valid 11-digit mobile number!");
       return;
     }
 
@@ -117,8 +167,10 @@ const Dashboard = () => {
               <ProfileForm
                 userProfile={userProfile}
                 setUserProfile={setUserProfile}
+                handleNumber={handleNumber}
                 handleMatch={handleMatch}
                 appliedJobs={appliedJobs}
+                error={error}
               />
             </motion.div>
           )}
